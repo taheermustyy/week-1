@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taheer HotelS</title>
+  <script>
+    // Handle Booking Form Submission
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      alert("Booking submitted successfully! We'll contact you shortly. Be patient.");
+      event.target.reset();
+    }
+
+    // Handle Contact Form Submission
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      alert("Message sent successfully! We'll respond as soon as possible.");
+      event.target.reset();
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Taheer Hotel</h1>
+    <p>Luxury, Comfort, and Elegance in the Heart of the City</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+
+    <p>Taheer Hotel is a 5-star luxury hotel offering elegant rooms, world-class amenities, and impeccable service. Located in the heart of the city, we provide comfort and convenience to both business and leisure travelers.</p>
+ <img src="opp.jfif" alt="Taheer HotelS front view" width="500" height="300">
+</section>
+
+  <!-- Rooms Section -->
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Room Type</th>
+          <th>Capacity</th>
+          <th>Rate (per night)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standard Room</td>
+          <td>2 Adults</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Deluxe Room</td>
+          <td>2 Adults + 1 Child</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>Executive Suite</td>
+          <td>4 Persons</td>
+          <td>$300</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Amenities Section -->
+  <section id="amenities">
+    <h2>Amenities</h2>
+    <ul>
+      <li>Free High-Speed Wi-Fi</li>
+      <li>Swimming Pool</li>
+      <li>24/7 Room Service</li>
+      <li>Fitness Center</li>
+      <li>Conference Halls</li>
+      <li>Spa and Wellness Center</li>
+      <li>Restaurant & Bar</li>
+    </ul>
+  </section>
+
+ 
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to contact us below:</p>
+    <form onsubmit="handleContactSubmit(event)">
+      <label for="contact-name">Your Name:</label><br>
+      <input type="text" id="contact-name" name="contact-name" required><br><br>
+
+      <label for="contact-email">Your Email:</label><br>
+      <input type="email" id="contact-email" name="contact-email" required><br><br>
+
+      <label for="contact-message">Message:</label><br>
+      <textarea id="contact-message" name="contact-message" rows="5" cols="30" required></textarea><br><br>
+
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <p>&copy; 2025 Taheer Hotel. All rights reserved.</p>
+    <address>
+      123 Grand Avenue,<br>
+      victoria island, Lagos<br>
+      Phone: +234 810 764 9674<br>
+      Email: Taheermustyy@gmail.com
+    </address>
+  </footer>
+
+</body>
+</html>
