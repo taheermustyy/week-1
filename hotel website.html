@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taheer Hotel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    form {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+  <script>
+    function confirmBooking(event) {
+      event.preventDefault();
+      alert("Booking submitted successfully! We'll contact you shortly. Please be patient.");
+      event.target.reset();
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Taheer Hotel</h1>
+    <p>Enjoy luxurious stays and unforgettable service in our 5-star luxury hotel located in the heart of the city.</p>
+  </section>
+
+  <!-- Book Section -->
+  <section id="book">
+    <h2>Book Your Stay</h2>
+    <form onsubmit="confirmBooking(event)">
+      <!-- Input 1 -->
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <!-- Input 2 -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Input 3 -->
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="e.g. 08123456789" required>
+
+      <!-- Input 4 -->
+      <label for="checkin">Check-In Date:</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <!-- Input 5 -->
+      <label for="checkout">Check-Out Date:</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <!-- Input 6 -->
+      <label for="roomtype">Room Type:</label>
+      <select id="roomtype" name="roomtype" required>
+        <option value="">--Select Room Type--</option>
+        <option value="standard">Standard Room - ₦30,000/night</option>
+        <option value="deluxe">Deluxe Room - ₦50,000/night</option>
+        <option value="suite">Executive Suite - ₦80,000/night</option>
+      </select>
+
+      <!-- Input 7 -->
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <!-- Input 8 -->
+      <label for="requests">Special Requests:</label>
+      <textarea id="requests" name="requests" rows="4" placeholder="Any special preferences..."></textarea>
+
+      <input type="submit" value="Confirm Booking">
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Address: 123 City Road, Lagos, Nigeria</p>
+    <p>Phone: +234 800 123 4567</p>
+    <p>Email: taheermustyy@gmail.com</p>
+  </section>
+
+
+</body>
+</html>
