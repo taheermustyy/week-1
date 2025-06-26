@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taheer Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #008080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1 1 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #008080;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #006666;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #008080;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Responsive fix */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Taheer Hotel</h1>
+        <p>Your comfort is our priority</p>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h2>About Us</h2>
+            <p>Taheer Hotel is a five-star hotel offering world-class comfort and hospitality. Located in the heart of the city with top-tier facilities for guests.</p>
+        </div>
+
+        <div class="box">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Luxury Rooms</li>
+                <li>Spa & Wellness</li>
+                <li>Swimming Pool</li>
+                <li>Free Wi-Fi</li>
+                <li>Restaurant & Bar</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h2>Book a Room</h2>
+            <img src="room.jpeg" alt="our hotel">
+            <form onsubmit="alert('Booking received! We will contact you shortly.'); return false;">
+                <label>Full Name:</label>
+                <input type="text" required>
+
+                <label>Email:</label>
+                <input type="email" required>
+
+                <label>Phone Number:</label>
+                <input type="number" required>
+
+                <label>Check-in Date:</label>
+                <input type="date" required>
+
+                <label>Check-out Date:</label>
+                <input type="date" required>
+
+                <label>Room Type:</label>
+                <select required>
+                    <option>Standard</option>
+                    <option>Deluxe</option>
+                    <option>Suite</option>
+                </select>
+
+                <label>Number of Guests:</label>
+                <input type="number" required>
+
+                <label>Special Requests:</label>
+                <textarea rows="3"></textarea>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+
+        <div class="box">
+            <h2>Contact Us</h2>
+            <p>Email: taheer@gmail.com.com</p>
+            <p>Phone: +234 814 156 9641</p>
+            <p>Address: 123 Palm Avenue, Abuja</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Taheer Hotel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
